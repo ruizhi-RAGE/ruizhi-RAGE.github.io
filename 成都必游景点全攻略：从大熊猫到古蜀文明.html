@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成都旅游攻略播客</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8f1e9;
+            color: #333;
+            line-height: 1.7;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glassmorphism:hover {
+            box-shadow: 0 15px 45px rgba(31, 38, 135, 0.15);
+            transform: translateY(-3px);
+        }
+        .speaker-a {
+            color: #e63946;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            background-color: rgba(230, 57, 70, 0.1);
+            transition: all 0.3s ease;
+        }
+        .speaker-b {
+            color: #457b9d;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            background-color: rgba(69, 123, 157, 0.1);
+            transition: all 0.3s ease;
+        }
+        .speaker-a:hover, .speaker-b:hover {
+            transform: translateX(3px);
+        }
+        .transcript-container {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 16px;
+        }
+        .transcript-container p {
+            margin-bottom: 1.5rem;
+            padding: 0.8rem 0;
+            line-height: 1.8;
+        }
+        .active-line {
+            margin: 1rem -2rem;
+            padding: 1.2rem 2rem;
+        }
+        .waveform {
+            height: 160px;
+            width: 100%;
+            aspect-ratio: 21/9;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .waveform:hover {
+            transform: scale(1.01);
+        }
+        .title-text {
+            color: #e63946;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        .subtitle-text {
+            color: #457b9d;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold title-text mb-2">成都旅游攻略播客</h1>
+            <p class="subtitle-text">带你探索成都不得不去的好地方</p>
+        </div>
+
+        <div class="glassmorphism p-6 mb-8">
+            <div class="waveform mb-4" style="background-image: url('https://s.coze.cn/image/8wMgHNEW8N0/')"></div>
+            
+            <div class="flex items-center justify-between mb-4">
+                <audio id="podcast-audio" controls class="w-full">
+                    <source src="https://lf-bot-studio-plugin-resource.coze.cn/obj/bot-studio-platform-plugin-tos/sami_podcast/tts/c0cacdac26f342f69d7c60f035228f1e.mp3" type="audio/mpeg">
+                    您的浏览器不支持音频播放
+                </audio>
+            </div>
+            <p class="text-xs text-gray-500 mt-2">*若商用，需要声明由扣子空间生成</p>
+        </div>
+         
+        <div class="glassmorphism p-6">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+                <i class="fas fa-closed-captioning mr-2 text-indigo-500"></i>播客字幕
+            </h2>
+            
+            <div class="transcript-container p-4 bg-gray-50 rounded-lg" id="transcript">
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哈喽大家好欢迎来到今天的播客，啊今天我们要聊一聊。成都，那些不得不去的好地方，啊这可是一份超级详细的。景点攻略哦！</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 听起来很棒哎那我们就赶紧开始吧，就带我，云游一下这些景点吧！</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 咱们先来聊一聊，为什么我们今天要特别的聊一聊，带大家看一看成都的这些景点的攻略呢？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 是因为，呃之前有听众留言说，很期待，去成都旅行。然后主播也是特别开心就准备了今天这样一期，满满的都是干货的，景点攻略。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 那我们第一个要聊的呢就是这个成都大熊猫繁育研究基地啊为什么大家都要推荐，去这里玩呢？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 因为这里是，大熊猫的快乐家园呀！然后你可以看到，大熊猫，吃竹子。睡觉，玩，特别可爱就像，毛茸茸的大团子在那里。活动园区里面还有，科普展示区可以让你了解，大熊猫的生长。还有他们的一些生活习性，特别适合小朋友。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 听起来又好玩又能学到东西啊对那交通方不方便呢？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 非常方便就是从，七号线三瓦窑站，坐六号线到西华大道站 D 出口出来走一小段路就到了。然后门票也很便宜啊，成人票是五十五块钱，学生票是二十七块五，小朋友的话。好像是，一米三以下还是一米二以下是免费的啊对。就是要注意的是，夏天去的话一定要做好防晒和防暑的措施。尽量早一点去，这样的话你不光可以避开人流，还可以看到，更活泼的大熊猫。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哎，那这个金沙遗址博物馆为什么值得一去呢？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 因为它是一扇通往古蜀文明的神秘大门呐！然后里面有，非常珍贵的。金面具还有，玉器，这些都是上千年的历史了，你可以通过这些文物。真的可以想象到，古蜀人他们的生活，是多么的，不一样。门票也只要七十块钱，建议玩三个小时到四个小时左右，从外婆家过去的话，也是，地铁或者打车都很方便，手机上一查就知道了。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哎那成都欢乐谷呢，为什么也值得一去？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 因为它有九个主题区域啊，就像九个不一样的魔法世界。然后里面有，摩托过山车这种非常刺激的。也有旋转木马这种适合小朋友的，交通也很方便就是。七号线三瓦窑站坐六号线到西华大道站 D 出口出来走一会就到了。全价票是两百三十块钱，儿童票是一百二十块钱。你去之前最好查一下，各个项目的排队情况这样的话你可以更合理的安排你的时间。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哎，还有这个成都极地海洋公园，为什么也能够吸引大家的目光？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 因为它是一个，海底的神秘世界呀！你可以看到，企鹅，北极熊。然后海豚白鲸的表演也非常的精彩，还有鲨鱼馆你可以。近距离的接触海洋生物，交通的话也是。七号线三瓦窑站坐一号线到海昌路站 A 出口出来走一小段路就到了。票价的话是成人票是两百六十块钱，如果你想要再去那个深海探险体验馆的话是两百八十块钱。儿童票的话是两百块钱。要注意的是里面的温度会比较低，你最好提前查好表演的时间这样的话你可以。合理的安排你的行程。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哎，还有这个成都融创乐园，为什么也值得一玩？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 因为它是一个，以蜀文化为主题的一个乐园，就像走进了一座。历史的魔法城堡，然后它有六大主题区域。有二十五台游乐设备，还有很多的演艺，还有萌宠动物。你可以在这里面，既可以体验到非常惊险刺激的项目。又可以，沉浸在，浓浓的蜀文化的氛围当中。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 听起来还挺有文化气息的一个游乐场啊！</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 对没错，然后交通的话就是从外婆家。可以先乘茶店子的班车到都江堰客运中心再打车，十分钟左右就可以到了。票价的话也是非常的合理啊成人的欢乐套票是一百九十八块钱。儿童和老人的话是一百二十块钱。亲子套票一大一小是两百九十八块钱。你去之前最好也看一下，他们的这个园内的活动安排这样的话你可以规划好你的路线。可以玩的更开心！</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哎，还有这个都江堰熊猫谷和这个中华大熊猫苑，为什么也是一个不能错过的地方？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 因为，呃熊猫谷的话它是一个。半原生态的环境，然后你可以看到大熊猫在里面，自由的生活。小熊猫的话是要提前预约的。中华大熊猫苑的话你可以。非常近距离的观察大熊猫的生活，他们还有康复训练区。你可以看到，大熊猫在里面进行一些专业的康复训练。还有一个文化展览馆里面有很多。跟大熊猫有关的一些历史文物啊，艺术品啊，和科普资料。这两个地方的话都是，从外婆家过去交通非常的便利门票也很合理。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 哎，你觉得为什么大家都对这个成都之旅充满期待？</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 因为它是一个，就像我说的它是一个。又有可爱的大熊猫，又有刺激的游乐园。然后又有，神秘的古蜀文明的博物馆，又有，迷人的海洋世界。就像我说的金沙遗址博物馆就像是一个。藏满了古蜀秘密的一个宝藏盒子。对一家人可以一起去探索这些古老的故事，就真的很让人向往。</p>
+                
+                <p class="mb-3"><span class="speaker-a">女生:</span> 好了，然后今天我们给大家聊了这么多，成都的这些好玩的地方。从可爱的大熊猫基地，到神秘的古蜀文明的博物馆。到刺激的游乐园再到，迷人的海洋世界。每一个地方都值得大家去好好的玩一玩，体验一下，对希望大家。</p>
+                
+                <p class="mb-3"><span class="speaker-b">男生:</span> 以上就是这期播客的全部内容啦然后。期待你们的成都之旅也能够充满惊喜，咱们下期再见吧拜拜拜拜！</p>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>页面内容均由 AI 生成，仅供参考</p>
+            <p>created by <a href="https://space.coze.cn" class="text-indigo-500 hover:underline">coze space</a></p>
+        </div>
+    </div>
